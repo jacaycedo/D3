@@ -11,16 +11,6 @@ const Bar = () => {
     ).then((dataS) => {
       console.log(dataS);
 
-      const data = [
-        { name: "Juan", age: 3 },
-        { name: "Orlando", age: 39 },
-        { name: "María", age: 7 },
-        { name: "Sandra", age: 35 },
-        { name: "Fernanda", age: 16 },
-        { name: "Maribel", age: 45 },
-        { name: "Sofía", age: 6 },
-      ];
-
       const width = 700;
       const height = 500;
       const margin = { top: 10, left: 50, bottom: 40, right: 10 };
@@ -34,7 +24,6 @@ const Bar = () => {
       let g = svg
         .append("g")
         .attr("transform", `translate(${margin.left},${margin.top})`);
-        let valu = dataS.map((e)=>{return parseInt(e.value)} )
         const y = d3.scaleLinear().domain([0, 1000000]).range([iheight, 0]);
 
       const x = d3
